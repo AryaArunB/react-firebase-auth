@@ -1,7 +1,7 @@
 import { chakra, Container, Heading } from '@chakra-ui/react'
 import React from 'react'
 import { Layout } from '../components/Layout'
-import { useAuth } from '../contexts/AuthContext'
+// import { useAuth } from '../contexts/AuthContext'
 import {
   Box,
   Center,
@@ -10,12 +10,11 @@ import {
   Stack,
   Image,
 } from '@chakra-ui/react';
-import { Grid, GridItem } from '@chakra-ui/react';
 import { SimpleGrid } from '@chakra-ui/react';
 const IMAGE = 'https://images.unsplash.com/photo-1518051870910-a46e30d9db16?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80';
 
 export default function Profilepage() {
-  const { currentUser } = useAuth()
+  // const { currentUser } = useAuth()
   return (
     <Layout>
       {/* <Heading>Dashboard</Heading> */}
