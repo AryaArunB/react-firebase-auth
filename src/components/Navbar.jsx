@@ -1,5 +1,6 @@
 import {
   Box,
+  Center,
   HStack,
   IconButton,
   Spacer,
@@ -8,6 +9,7 @@ import {
 } from '@chakra-ui/react'
 import React from 'react'
 import { FaMoon, FaSun } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import Navlink from './Navlink'
 
@@ -17,23 +19,35 @@ export function Navbar() {
   const { logout, currentUser } = useAuth()
 
   return (
+    
     <Box
       borderBottom='2px'
       borderBottomColor={useColorModeValue('gray.100', 'gray.700')}
       mb={4}
       py={4}
+      
     >
       <HStack
         justifyContent='flex-end'
+        display={''}
+        flexDirection={['column', 'row']}
         maxW='container.lg'
         mx='auto'
-        spacing={4}
+        spacing={'auto'}
+        
       >
-        <Navlink to='/' name='masterMinds' size='lg' />
+        <Center>
+       
+        <Navlink to='https://mastermindsltd.com/'  name='masterMinds' size='lg'/>
+ 
+       
+        </Center>
         <Spacer />
-        {!currentUser && <Navlink to='/login' name='Login' />}
+        <Center>
+        {!currentUser && <Navlink to='/login' name='Login'/>}
         {!currentUser && <Navlink to='/register' name='Register' />}
-        {currentUser && <Navlink to='/profile' name='Profile' />}
+        {currentUser && <Navlink to='/profile' name='dashboard' />}
+        
         {currentUser && (
           <Navlink
             to='/logout'
@@ -49,7 +63,7 @@ export function Navbar() {
           icon={useColorModeValue(<FaSun />, <FaMoon />)}
           onClick={toggleColorMode}
           aria-label='toggle-dark-mode'
-        />
+        /></Center>
       </HStack>
     </Box>
   )
