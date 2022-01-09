@@ -75,9 +75,16 @@ export default function Profilepage() {
           <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
         
           </Text>
-          <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
+          <Button 
+             colorScheme={'green'}
+              bg={'green.400'}
+              rounded={'full'}
+              px={6}
+              _hover={{
+                bg: 'green.500',
+              }} onClick={() => history.push('/academics')}>
             Arts
-          </Heading>
+          </Button>
           <Stack direction={'row'} align={'center'}>
             <Text fontWeight={800} fontSize={'xl'}>
              
@@ -207,9 +214,17 @@ export default function Profilepage() {
           <Text color={'gray.500'} fontSize={'sm'} textTransform={'uppercase'}>
             
           </Text>
-          <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
+          <Button 
+             colorScheme={'green'}
+              bg={'green.400'}
+              rounded={'full'}
+              px={6}
+              _hover={{
+                bg: 'green.500',
+              }} onClick={() => history.push('/entertainment')}>
             Entertainment
-          </Heading>
+          </Button>
+      
           <Stack direction={'row'} align={'center'}>
             <Text fontWeight={800} fontSize={'xl'}>
             

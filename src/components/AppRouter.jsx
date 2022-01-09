@@ -16,6 +16,8 @@ import Registerpage from '../pages/Registerpage'
 import ResetPasswordPage from '../pages/ResetPasswordPage'
 import TestPage from '../pages/TestPage'
 import Academics from '../pages/Academics'
+import Arts from '../pages/Arts'
+import Entertainment from '../pages/Entertainment'
 export default function AppRouter(props) {
   return (
     <>
@@ -27,6 +29,9 @@ export default function AppRouter(props) {
           <ProtectedRoute exact path='/profile' component={Profilepage} />
           <ProtectedRoute exact path='/test' component={TestPage} />
             <ProtectedRoute exact path='/academics' component={Academics} />
+            <ProtectedRoute exact path='/arts' component={Arts} />
+            <ProtectedRoute exact path='/Entertainment' component={Entertainment} />
+
           <ProtectedRoute
             exact
             path='/forgot-password'
